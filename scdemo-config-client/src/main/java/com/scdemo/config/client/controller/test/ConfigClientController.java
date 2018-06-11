@@ -1,0 +1,45 @@
+package com.scdemo.config.client.controller.test;
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+/**
+ * 测试config client
+ * @author zhangjing
+ *
+ */
+@RefreshScope
+@RestController
+@RequestMapping("/configClient")
+public class ConfigClientController  {
+    
+    /**
+     * 获取配置foo
+     */
+	@Value("${fooo:122}")
+	String foo;
+
+    @RequestMapping(value = "/getFoo",method = RequestMethod.GET, headers = "Accept=*/*",produces = "application/json;charset=UTF-8")
+    public String getFoo (HttpServletRequest request){
+        
+    	return foo;
+    }
+    /**
+     * 获取配置port
+     */
+
+	@Value("${spring.rabbitmq.port}")
+	String port;
+    @RequestMapping(value = "/getPort",method = RequestMethod.GET, headers = "Accept=*/*",produces = "application/json;charset=UTF-8")
+    public String getPort (HttpServletRequest request){
+        
+    	return port;
+    }
+}

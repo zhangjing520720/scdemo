@@ -1,0 +1,9 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8990/eureka/
+server:
+  port: 8992
+spring:
+  application:
+    name: parking

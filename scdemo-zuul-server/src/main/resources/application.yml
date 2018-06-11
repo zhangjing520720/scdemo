@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8990/eureka/
+server:
+  port: 8994
+spring:
+  application:
+    name: zuul
+zuul:
+  routes:
+    api-u:
+      path: /api-u/**
+      serviceId: user
+    api-p:
+      path: /api-p/**
+      serviceId: parking
+    api-c:
+      path: /api-c/**
+      serviceId: common

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+	<!-- 定义下面的引用名 -->
+	<Properties>
+		<property name="projectName">common-util</property>
+		<property name="logPattern">[${projectName}] %d{yyyy-MM-dd HH:mm:ss} -%-4r [%t] %-5p  %x - %m%n</property> 
+		<property name="basePath">/mnt/java/logs/${projectName}</property>
+	</Properties>
+	
+	<Appenders>
+		<!-- 控制台输出配置 -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout>
+				<pattern>${logPattern}</pattern>
+			</PatternLayout>
+		</Console>
+		
+		<!--文件会打印出所有信息，这个log每次运行程序会自动清空，由append属性决定
+		<File name="File" fileName="${basePath}/log4j.log" append="false">
+			<PatternLayout>
+				<pattern>${logPattern}</pattern>
+			</PatternLayout>
+		</File>-->
+		
+		<!-- 输出error级别到指定路径 -->
+		<RollingFile name="rollingfile_error-msg" filename="${basePath}/log4j-error.log"
+			filePattern="${basePath}/log4j-error/log4j-error%d{yyyy-MM-dd}.log"
+			append="true">
+			<ThresholdFilter level="error" onMatch="ACCEPT"
+				onMismatch="DENY" />
+			<PatternLayout>
+				<Pattern>${logPattern}</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+		
+		<!-- 输出info级别到指定路径 -->
+		<RollingFile name="rollingfile_info-msg" filename="${basePath}/log4j-info.log"
+			filePattern="${basePath}/log4j-info/log4j-info%d{yyyy-MM-dd}.log" append="true">
+			<Filters>
+				<ThresholdFilter level="warn" onMatch="DENY"
+					onMismatch="NEUTRAL" />
+				<ThresholdFilter level="info" onMatch="ACCEPT"
+					onMismatch="DENY" />
+			</Filters>
+			<PatternLayout>
+				<Pattern>${logPattern}</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="Console" />
+			<!--<AppenderRef ref="File" />-->
+			<AppenderRef ref="rollingfile_error-msg" />
+			<AppenderRef ref="rollingfile_info-msg" />
+		</Root>
+	</Loggers>
+	
+</Configuration>  
