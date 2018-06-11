@@ -23,7 +23,7 @@ public class ConfigClientController  {
     /**
      * 获取配置foo
      */
-	@Value("${fooo:122}")
+	@Value("${foo}")
 	String foo;
 
     @RequestMapping(value = "/getFoo",method = RequestMethod.GET, headers = "Accept=*/*",produces = "application/json;charset=UTF-8")
@@ -35,7 +35,7 @@ public class ConfigClientController  {
      * 获取配置port
      */
 
-	@Value("${spring.rabbitmq.port}")
+	@Value("${foo}")
 	String port;
     @RequestMapping(value = "/getPort",method = RequestMethod.GET, headers = "Accept=*/*",produces = "application/json;charset=UTF-8")
     public String getPort (HttpServletRequest request){
