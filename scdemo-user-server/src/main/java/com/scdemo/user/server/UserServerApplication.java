@@ -14,6 +14,9 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * user服务启动类
+ * 1、feign方式调用服务
+ * 2、hystrix 断路器
+ * 3、HystrixDashboard 仪表盘实时监控
  * @author rex
  * @version 1.0
  */

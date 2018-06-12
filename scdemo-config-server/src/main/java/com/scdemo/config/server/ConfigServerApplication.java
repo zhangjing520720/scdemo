@@ -7,6 +7,8 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * config服务启动类
+ * 1、分布式配置中心 server端
+ * 2、消息总线在client服务
  * @author rex
  * @version 1.0
  */

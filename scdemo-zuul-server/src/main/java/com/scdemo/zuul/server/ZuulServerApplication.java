@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * zuul服务启动类
+ * 1、服务网关示例
  * @author rex
  * @version 1.0
  */

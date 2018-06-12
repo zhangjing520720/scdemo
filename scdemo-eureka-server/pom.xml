@@ -10,8 +10,7 @@
   <groupId>com.sc</groupId>
   <artifactId>scdemo-eureka-server</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>scdemo-eureka-server</name>
-  <url>http://maven.apache.org</url>
+  <packaging>war</packaging>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

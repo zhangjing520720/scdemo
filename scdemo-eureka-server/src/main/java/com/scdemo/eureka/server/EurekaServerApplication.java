@@ -7,6 +7,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * eureka注册中心服务启动类
+ * 1、注册中心，所有服务往这里注册
+ * 2、高可用需要做集群
  * @author rex
  * @version 1.0
  */

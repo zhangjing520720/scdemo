@@ -10,7 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.google.gson.Gson;
 import com.wsp.utils.WSPGetID;
 
 /**
@@ -51,10 +50,6 @@ public class BaseController {
 		return WSPGetID.getUUID32();
 	}
 
-	/**
-	 * @param gson
-	 */
-	protected Gson gson = new Gson();
 
 	/**
 	 * @param fastJson

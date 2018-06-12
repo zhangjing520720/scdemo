@@ -13,6 +13,9 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * parking服务启动类
+ * 1、rest+ribbon 方式调用服务
+ * 2、hystrix 断路器
+ * 3、HystrixDashboard 仪表盘实时监控
  * @author rex
  * @version 1.0
  */

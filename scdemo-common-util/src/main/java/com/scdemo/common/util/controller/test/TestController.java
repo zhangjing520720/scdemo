@@ -2,14 +2,9 @@ package com.scdemo.common.util.controller.test;
 
 
 import com.scdemo.common.util.controller.BaseController;
-import com.scdemo.common.util.model.PageData;
-import com.wsp.core.WSPCode;
-import com.wsp.core.WSPResult;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController

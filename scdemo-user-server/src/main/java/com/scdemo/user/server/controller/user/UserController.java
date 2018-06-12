@@ -3,14 +3,10 @@ package com.scdemo.user.server.controller.user;
 
 import com.scdemo.user.server.controller.BaseController;
 import com.scdemo.user.server.inter.ISchedualTest;
-import com.wsp.core.WSPCode;
-import com.wsp.core.WSPResult;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 /**

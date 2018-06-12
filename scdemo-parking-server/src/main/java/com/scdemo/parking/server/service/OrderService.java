@@ -2,20 +2,10 @@ package com.scdemo.parking.server.service;
 
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.wsp.core.WSPCode;
-import com.wsp.core.WSPResult;
-
-import com.wsp.utils.WSPDate;
-
-import com.wsp.utils.WSPGetID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import javax.annotation.Resource;
-import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.*;
 
 @Service("orderService")
 public class OrderService {

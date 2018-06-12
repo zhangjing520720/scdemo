@@ -1,0 +1,10 @@
+spring: 
+   cloud:
+      stream: 
+         kafka: 
+            binder: 
+               brokers: localhost:9092  
+               zk-nodes: localhost:2181  
+               minPartitionCount: 1  
+               autoCreateTopics: true  
+               autoAddPartitions: true  
