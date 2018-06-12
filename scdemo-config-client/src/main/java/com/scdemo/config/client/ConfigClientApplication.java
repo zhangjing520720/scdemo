@@ -9,6 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * config 客户端启动类
  * 1、分布式配置中心 client客户端
  * 2、消息总线，采用kafka方式，使用前需启动zookeeper和kafka
+ * 3、需要先启动config-server
  * @author rex
  * @version 1.0
  */
