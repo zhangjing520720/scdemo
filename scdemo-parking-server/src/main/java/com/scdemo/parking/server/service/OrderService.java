@@ -13,7 +13,7 @@ public class OrderService {
     RestTemplate restTemplate;
     
     //Hystrix断路器测试
-    @HystrixCommand(fallbackMethod = "getError")
+    //@HystrixCommand(fallbackMethod = "getError")
     public String getService(String name) {
         return restTemplate.getForObject("http://common/test/get?name="+name,String.class);
     }

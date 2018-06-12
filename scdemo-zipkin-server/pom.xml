@@ -8,58 +8,35 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.sc</groupId>
-  <artifactId>scdemo-common-util</artifactId>
+  <artifactId>scdemo-zipkin-server</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
   </properties>
   <dependencies>
-  		<!-- 基础包 -->
-		<dependency>
-			<groupId>WSPFramework</groupId>
-			<artifactId>WSPFramework</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/WSPFramework.jar</systemPath>
-		</dependency>
-		<!-- eureka 依赖 -->
-    	<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+  		<!--springboot 依赖-->
+  		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
-        <!-- zipkin 依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
-        <!-- sleuth 依赖 -->
-        <dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-sleuth</artifactId>
-		</dependency>
-        <!--springboot web 依赖 -->
+  		<!--springboot web 依赖-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
-        <!-- log4j2 依赖-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-log4j2</artifactId>
-		</dependency>
-		<!-- fastjson 依赖-->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.1.27</version>
-		</dependency>
+		<!--zipkin  依赖-->
+    	<dependency>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-autoconfigure-ui</artifactId>
+        </dependency>
   </dependencies>
-  
-  
   <dependencyManagement>
         <dependencies>
             <dependency>
@@ -72,7 +49,7 @@
         </dependencies>
     </dependencyManagement>
     <build>
-		<finalName>scdemo-common-util</finalName>
+		<finalName>scdemo-zipkin-server</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -99,3 +76,4 @@
 		</plugins>
 	</build>
 </project>
+

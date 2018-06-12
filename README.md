@@ -35,6 +35,12 @@
 * hystrix 断路器
 * HystrixDashboard 仪表盘实时监控
 
+***
 #### scdemo-zuul-server
-* 服务网关示例
+* 服务网关
 * 转发parking和user，详情看配置文件
+
+***
+#### scdemo-zipkin-server
+* 服务链路跟踪
+* 收集调用数据

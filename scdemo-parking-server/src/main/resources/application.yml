@@ -7,3 +7,5 @@ server:
 spring:
   application:
     name: parking
+  zipkin: 
+    base-url: http://localhost:8995

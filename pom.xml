@@ -29,5 +29,6 @@
     <module>scdemo-zuul-server</module>
     <module>scdemo-config-server</module>
     <module>scdemo-config-client</module>
+    <module>scdemo-zipkin-server</module>
   </modules>
 </project>

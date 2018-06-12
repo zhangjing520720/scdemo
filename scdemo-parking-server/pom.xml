@@ -49,6 +49,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <!-- zipkin 依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+         <!-- sleuth 依赖 -->
+        <dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
         <!--springboot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

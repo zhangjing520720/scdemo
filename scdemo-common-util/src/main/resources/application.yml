@@ -7,3 +7,5 @@ server:
 spring:
   application:
     name: common
+  zipkin: 
+    base-url: http://localhost:8995

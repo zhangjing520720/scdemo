@@ -1,0 +1,5 @@
+server:
+  port: 8995
+spring:
+  application:
+    name: zipkin
